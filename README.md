@@ -1,5 +1,7 @@
 # 智能请假审批 Agent · LangChain 版（简历项目 3）
 
+🌐 **在线 Demo**：https://langchain-leave-agent-f9tecr6cmnafuwpkwah6j8.streamlit.app/
+
 用 **LangChain 框架**实现的「多步骤 Agent」：收到自然语言请假申请后，模型**自主规划**并调用工具——
 检索公司制度（RAG）+ 计算请假天数——最后输出结构化审批结论。
 
