@@ -4,7 +4,17 @@ Streamlit 界面：输入请假申请 → 看 LangChain Agent 自主调工具 �
 运行：streamlit run app.py  （默认 http://localhost:8503，避开项目1 的 8501 / 项目2 的 8502）
 """
 import json
+import os
 import streamlit as st
+
+# Streamlit Cloud 部署：从 Secrets 读取 API Key，兼容本地 .env/环境变量
+if "DEEPSEEK_API_KEY" not in os.environ:
+    try:
+        _k = st.secrets.get("DEEPSEEK_API_KEY")
+        if _k:
+            os.environ["DEEPSEEK_API_KEY"] = _k
+    except Exception:
+        pass
 
 from agent import run
 
