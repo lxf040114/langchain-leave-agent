@@ -1,0 +1,8 @@
+services:
+  langchain-agent:
+    build: .
+    ports:
+      - "8503:8503"
+    environment:
+      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY}
+    restart: unless-stopped

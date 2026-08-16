@@ -1,0 +1,14 @@
+# 密钥
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 向量库（本地生成，不应入库）
+chroma_lc_db/
+
+# 系统
+.DS_Store
